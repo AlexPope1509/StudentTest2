@@ -27,7 +27,7 @@ namespace myTestApp2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Where(x=>x.Name.Equals("Alex"))?.FirstOrDefault();
+            Student student = db.Students.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
